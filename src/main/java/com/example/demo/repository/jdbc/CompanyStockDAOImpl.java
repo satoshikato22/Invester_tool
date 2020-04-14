@@ -45,10 +45,27 @@ public class CompanyStockDAOImpl implements CompanyStockDAO{
 	@Override
 	public List<Map<String, Object>> selectStock(String id) throws DataAccessException {
 		// TODO 自動生成されたメソッド・スタブ
-		List<Map<String,Object>> getList = jdbc.queryForList("Select * From CompanyStock WHERE code = ? order by number desc limit 7",id);
+		List<Map<String,Object>> getList = jdbc.queryForList("Select * From CompanyStock WHERE code = ? order by number desc limit 30",id);
 
 		return getList;
 	}
+
+	@Override
+	public List<Map<String, Object>> selectStockM(String id, String Month) throws DataAccessException {
+		// TODO 自動生成されたメソッド・スタブ
+				//List<Map<String,Object>> getList = jdbc.queryForList("Select * From CompanyStock WHERE code = ? and Daily like ?",id,"%"+Month+"%");
+		List<Map<String,Object>> getList = jdbc.queryForList("Select * From CompanyStock WHERE code = ? and Daily like ?",id,"%"+Month+"%");
+
+				return getList;
+	}
+
+	@Override
+	public List<Map<String, Object>> selectStockY(String id) throws DataAccessException {
+		// TODO 自動生成されたメソッド・スタブ
+		List<Map<String,Object>> getList = jdbc.queryForList("Select * From CompanyStock");
+		return getList;
+	}
+
 
 
 }

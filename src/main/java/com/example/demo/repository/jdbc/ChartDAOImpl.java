@@ -29,7 +29,7 @@ public class ChartDAOImpl implements ChartDAO{
 	@Override
 	public List<Map<String, Object>> selectAllD() throws DataAccessException {
 		// TODO 自動生成されたメソッド・スタブ
-		List<Map<String,Object>> getList = jdbc.queryForList("Select * From D_Nikkei_average order by number desc limit 7");
+		List<Map<String,Object>> getList = jdbc.queryForList("Select * From D_Nikkei_average order by number desc limit 30");
 		return getList;
 	}
 

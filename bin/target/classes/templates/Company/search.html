@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>企業検索</title>
+</head>
+<body>
+<h1>企業コードまたは企業名を入力してください</h1>
+<form action="/search/result" method="get">
+	<input type="text" name="name" th:value="${name1_value}">
+	<input type="submit" value="検索">
+</form>
+<hr />
+<div th:if="${companyList != null}">
+	<div th:each="item : ${companyList}">
+	<a href="/search/company" th:href="@{/search/company(id=${item.code})}"><p th:text="${item.code}" /></a>
+	<a href="/search/company" th:href="@{/search/company(id=${item.code})}"><p th:text="${item.company_name}" /></a>
+	</div>
+</div>
+</body>
+</html>

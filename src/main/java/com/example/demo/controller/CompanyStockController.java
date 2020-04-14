@@ -3,7 +3,6 @@ package com.example.demo.controller;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -16,7 +15,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.model.CompanyData;
-import com.example.demo.model.CompanyStock;
 import com.example.demo.service.CompanyStockService;
 
 @Controller
@@ -90,7 +88,7 @@ public class CompanyStockController {
 	    	}
 	    }
 
-
+/*
 	    List<Map<String, Object>> getList = companyStockService.selectStock(id);
 
         // グラフの横軸と縦軸の値を、それぞれString、int型の配列に格納しておきます。
@@ -128,7 +126,9 @@ public class CompanyStockController {
         // Modelに格納します。ビュー側でグラフ用の配列を受け取れるようにしておきます。
         model.addAttribute("label",label1);
         model.addAttribute("point",point1);
+ */
 	    model.addAttribute("modorichi",modorichi);
+	    model.addAttribute("id",id);
 
 		return "Company/companyInformation";
 

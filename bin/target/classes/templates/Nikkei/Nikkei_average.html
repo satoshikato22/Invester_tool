@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>日経平均</h1>
+<p th:text="${nikkei.averageStock}"/>
+<p th:text="${nikkei.startPrice}" />
+<p th:text="${nikkei.highPrice}" />
+<p th:text="${nikkei.lowPrice}" />
+<a href="/Nikkei_average">更新する</a>
+<a href="/home">戻る</a>
+<hr />
+<a href="/D_chart">直近7日間のチャートを見る</a>
+
+<p>年間チャートを見る</p>
+<!--
+<form action="/M_chart" method="post">
+年度<input type="text" name="Month" th:value="${Month1_value}" />
+<input type="submit" value="送信">
+</form>
+ -->
+  <form action="/M_chart" method="post">
+    <select name="Month">
+    <option value=1990>1990年</option>
+	<option value=1991>1991年</option>
+	<option value=1992>1992年</option>
+	<option value=1993>1993年</option>
+	<option value=1994>1994年</option>
+	<option value=1995>1995年</option>
+	<option value=1996>1996年</option>
+	<option value=1997>1997年</option>
+	<option value=1998>1998年</option>
+	<option value=1999>1999年</option>
+	<option value=2000>2000年</option>
+	<option value=2001>2001年</option>
+	<option value=2002>2002年</option>
+	<option value=2003>2003年</option>
+	<option value=2004>2004年</option>
+	<option value=2005>2005年</option>
+	<option value=2006>2006年</option>
+	<option value=2007>2007年</option>
+	<option value=2008>2008年</option>
+	<option value=2009>2009年</option>
+	<option value=2010>2010年</option>
+	<option value=2011>2011年</option>
+	<option value=2012>2012年</option>
+	<option value=2013>2013年</option>
+	<option value=2014>2014年</option>
+	<option value=2015>2015年</option>
+	<option value=2016>2016年</option>
+	<option value=2017>2017年</option>
+	<option value=2018>2018年</option>
+	<option value=2019>2019年</option>
+	<option value=2020>2020年</option>
+    </select>
+    <input type="submit" value="表示">
+  </form>
+<br />
+<a href="/Y_chart">日経平均全年度を見る</a>
+</body>
+</html>

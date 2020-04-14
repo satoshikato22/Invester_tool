@@ -22,5 +22,14 @@ public class CompanyStockService {
 		List<Map<String, Object>> getList= dao.selectStock(id);
 		return getList;
 	}
+	public List<Map<String, Object>> selectStockM(String id, String month) {
+		List<Map<String, Object>> getList= dao.selectStockM(id, month);
+		return getList;
+	}
+	public List<Map<String, Object>> selectAllY(String id) {
+		// TODO 自動生成されたメソッド・スタブ
+		List<Map<String, Object>> getList= dao.selectStockY(id);
+		return getList;
+	}
 
 }
