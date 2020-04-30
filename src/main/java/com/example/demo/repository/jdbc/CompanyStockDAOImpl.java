@@ -66,6 +66,31 @@ public class CompanyStockDAOImpl implements CompanyStockDAO{
 		return getList;
 	}
 
+	@Override
+	public List<CompanyData> selectAll() throws DataAccessException {
+		// TODO 自動生成されたメソッド・スタブ
+		List<Map<String,Object>> getList = jdbc.queryForList("Select * From Companydata");
+		if(getList.size() ==0) {
+			getList = jdbc.queryForList("Select * From CompanyData");
+		}
+		//結果返却用の変数
+				List<CompanyData> companyList = new ArrayList<CompanyData>();
+
+				//取得したデータを結果返却用のListへ格納していく
+				for(Map<String,Object> map:getList) {
+					//Productインスタンスの生成
+					CompanyData companyData = new CompanyData();
+					//Productインスタンスに取得したデータをセットする
+					companyData.setCode((Integer)map.get("code"));
+					companyData.setCompany_name((String)map.get("company_name"));
+					companyData.setClassification((String)map.get("Classification"));
+					companyData.setUnit_shares((String)map.get("unit_shares"));
+
+					companyList.add(companyData);
+				}
+		return companyList;
+	}
+
 
 
 }

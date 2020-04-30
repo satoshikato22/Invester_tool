@@ -14,6 +14,10 @@ import com.example.demo.repository.CompanyStockDAO;
 public class CompanyStockService {
 	@Autowired
 	CompanyStockDAO dao;
+	public List<CompanyData> selectAll() throws DataAccessException {
+		List<CompanyData> companyList = dao.selectAll();
+		return companyList;
+	}
 	public List<CompanyData> selectAll(String name) throws DataAccessException {
 		List<CompanyData> companyList = dao.selectAll(name);
 		return companyList;

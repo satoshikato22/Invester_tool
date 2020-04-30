@@ -22,7 +22,9 @@ public class CompanyStockController {
 	@Autowired
 	CompanyStockService companyStockService;
 	@GetMapping("/search")
-	public String GetSearch() {
+	public String GetSearch(Model model) {
+		List<CompanyData> companyList = companyStockService.selectAll();
+		model.addAttribute("companyList",companyList);
 
 		return "Company/search";
 
@@ -36,7 +38,7 @@ public class CompanyStockController {
 
 	}
 	@GetMapping("/search/company")
-	public String GetCompany(@RequestParam String id,Model model) {
+	public String GetCompany(@RequestParam("id") String id,Model model) {
 		/*
 		 * Idを使用し、企業株DBへアクセスし、株価をリアルタイム表示可能。
 		 * かつ、歴代株価のグラフを表示可能にする

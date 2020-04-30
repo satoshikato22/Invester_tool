@@ -1,15 +1,270 @@
-<!DOCTYPE html>
-<html xmlns:th=xmlns:th="https://www.thymeleaf.org">
+<!DOCTYPE HTML>
+<html class="no-js" lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>StockPrice</title>
-</head>
+<meta charset="utf-8">
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="requiresActiveX=true">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]--><title>株価データ・株主優待情報・先物データ・ランキングデータ・CSVダウンロード無料 | 株式投資メモ・株価データベース</title>
+<meta name="description" content="上場全銘柄の個別株価の時系列データ、先物データ、各種ランキングから気配値、逆日歩、株主優待情報まで。株式投資、システムトレードや株価分析に有益な情報を多数配信！CSVダウンロード無料。" />
+<meta name="keywords" content="株式投資,先物,ランキング,株主優待,株価,株価推移,時系列データ,逆日歩,無料,CSVデータ,CSVダウンロード,株価データベース,全銘柄,全市場,マーケット" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="msapplication-TileColor" content="#fff">
+<meta name="msapplication-TileImage" content="images/mstile-144x144.png">
+<meta name="format-detection" content="telephone=no">
+<link rel="shortcut icon" href="https://kabuoji3.com/images/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="icon" href="https://kabuoji3.com/images/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="apple-touch-icon" sizes="57x57" href="https://kabuoji3.com/images/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://kabuoji3.com/images/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://kabuoji3.com/images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://kabuoji3.com/images/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://kabuoji3.com/images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://kabuoji3.com/images/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://kabuoji3.com/images/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://kabuoji3.com/images/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://kabuoji3.com/images/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="https://kabuoji3.com/images/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="https://kabuoji3.com/images/favicon-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="https://kabuoji3.com/images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="https://kabuoji3.com/images/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://kabuoji3.com/images/favicon-32x32.png" sizes="32x32">
+<link rel="manifest" href="https://kabuoji3.com/images/manifest.json">
+<link rel="canonical" href="https://kabuoji3.com/">
+<link href="https://kabuoji3.com/css/base.css" rel="stylesheet" media="all">
+<link href="https://kabuoji3.com/css/contents.css" rel="stylesheet" media="all">
+<script src="https://kabuoji3.com/js/modernizr.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1743433590716961",
+    enable_page_level_ads: true
+  });
+</script></head>
 <body>
-Invester toolへようこそ
-<hr />
-<a href="/Nikkei_average">日経平均を見る</a>
-<br/>
-<a href="/search">企業の株価を見る</a>
+<div id="wrapper" class="topPage">
 
+<!-- ▼ヘッダー -->
+<header id="header">
+<div id="header_top">
+<h1 class="page_name">株価データ・株主優待情報・先物データ・ランキングデータ・CSVダウンロード無料</h1>
+</div>
+<div id="header_btm">
+<div id="gNav_btn">
+<button class="btn" type="button"> <span class="top"></span> <span class="mid"></span> <span class="btm"></span> </button>
+<p class="txt">MENU</p>
+</div>
+<!--
+<p id="logo"><a href="https://kabuoji3.com/"><img src="/images/toplogo.jpg" width="200" alt="Invester tool"></a></p>
+ -->
+<p id="logo"><a href="https://kabuoji3.com/"><img src="https://images.cooltext.com/5403101.png" width="200"alt="Invester tool" /></a></p>
+</div>
+</header>
+<!-- ▲ヘッダー -->
+
+<!-- ▼グローバルナビ -->
+<div id="gNav_wrap">
+<div id="gNav">
+<ul>
+<li><a href="https://kabuoji3.com/"><i class="icon"><img src="https://kabuoji3.com/images/common/icon_home.png" width="29" alt="HOME"></i><span class="txt">HOME</span> </a></li>
+<li><a href="https://kabuoji3.com/stock/"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_stock.png" width="29" alt="個別株価データ"> </i> <span class="txt">個別株価データ</span> </a></li>
+<li><a href="https://kabuoji3.com/ranking/"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_ranking.png" width="29" alt="株価ランキングデータ"> </i> <span class="txt">株価ランキングデータ</span> </a></li>
+<li><a href="https://kabuoji3.com/orderbook/"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_orderbook.png" width="29" alt="寄前気配値ランキング"> </i> <span class="txt">寄前気配値ランキング</span> </a></li>
+<li><a href="https://kabuoji3.com/stockholder/"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_stockholder.png" width="29" alt="株主優待情報・配当データ"> </i> <span class="txt">株主優待データ</span> </a></li>
+<li><a href="https://kabuoji3.com/negative/"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_negative.png" width="29" alt="逆日歩データ・逆日歩ランキング"> </i> <span class="txt">逆日歩データ</span> </a></li>
+</ul>
+</div>
+</div><!-- ▲グローバルナビ -->
+
+<div id="contents_wrap">
+
+<div id="container">
+<div id="container_in">
+
+<!-- ▼メインコンテンツ -->
+<div id="main" role="main">
+<div id="tools">
+<ul>
+<li><a href="/Nikkei_average">
+<section class="item_wrap"> <i class="icon"> <img src="./images/common/icon_stock.png" width="66" alt="日経平均"> </i>
+<h2 class="item_ttl"> <span class="jp">日経平均</span> <span class="en">Stock Quotes</span> </h2>
+<div class="txt_wrap">
+<p> 日経平均株価上場全銘柄の個別株価データを。毎日更新。分析用の日足４本値と出来高のCSVデータダウンロード（無料）が可能です。</p>
+</div>
+</section>
+</a></li>
+<li><a href="/search">
+<section class="item_wrap"> <i class="icon"> <img src="./images/common/icon_ranking.png" width="66" alt="個別株価データ"> </i>
+<h2 class="item_ttl"> <span class="jp">個別株価データ</span> <span class="en">Rankings</span> </h2>
+<div class="txt_wrap">
+<p>上場全銘柄の個別株価データを。毎日更新。分析用の日足４本値と出来高のCSVデータダウンロード（無料）が可能です。</p>
+<!-- 株価ランキングデータ<p> 全市場対象の株価ランキングを時系列で掲載。日別「値上がり率」「値下がり率」「出来高」ランキングが確認できます。CSVデータダウンロード（無料）が可能です。 </p> -->
+</div>
+</section>
+</a></li>
+</ul>
+<ul>
+<li><a href="#">
+<section class="item_wrap"> <i class="icon"> <img src="./images/common/icon_futures.png" width="66" alt="株価ランキングデータ"> </i>
+<h2 class="item_ttl"> <span class="jp">株価ランキングデータ</span> <span class="en">Futures Exchange</span> </h2>
+<div class="txt_wrap">
+<p> Coming Soon（ただいま調整中です）<br>
+2001年からの日経225先物 日中・夜間の期近限月つなぎデータです。日経225先物miniは2006年からの日足、分足データです。</p>
+</div>
+</section>
+</a></li>
+<li><a href="./orderbook/">
+<section class="item_wrap"> <i class="icon"> <img src="./images/common/icon_orderbook.png" width="66" alt="寄前気配値速報"> </i>
+<h2 class="item_ttl"> <span class="jp">寄前気配値速報</span> <span class="en">Order Book</span> </h2>
+<div class="txt_wrap">
+<p> 寄り前の気配値ランキングデータ。相場の営業日は定時に更新します。便利なメール配信機能（※調整中）をご用意しています。</p>
+</div>
+</section>
+</a></li>
+</ul>
+<ul>
+<li><a href="./stockholder/">
+<section class="item_wrap"> <i class="icon"> <img src="./images/common/icon_stockholder.png" width="66" alt="株主優待データ"> </i>
+<h2 class="item_ttl"> <span class="jp">株主優待データ</span> <span class="en">Stockholder</span> </h2>
+<div class="txt_wrap">
+<p> 株主優待情報を権利確定月別で掲載。優待の詳細内容はもちろん、証券会社ごとの「一般信用」取り扱い有無も銘柄単位で確認できます。</p>
+</div>
+</section>
+</a></li>
+<li><a href="./negative/">
+<section class="item_wrap"> <i class="icon"> <img src="images/common/icon_negative.png" width="66" alt="株主優待データ"> </i>
+<h2 class="item_ttl"> <span class="jp">逆日歩データ</span> <span class="en">Negative interest per diem</span> </h2>
+<div class="txt_wrap">
+<p> 逆日歩速報と逆日歩ランキングデータ（料率順一覧）。銘柄単位で過去の逆日歩の検索とCSVデータダウンロード（無料）が可能です。※只今CSVデータは準備中です。 </p>
+</div>
+</section>
+</a></li>
+</ul>
+</div>
+</div>
+<!-- ▲メインコンテンツ -->
+
+<div id="side">
+
+<!-- ▼sidead01 -->
+<aside class="side_adv">
+<div class="adv_wrap">
+<div class="adv square">
+<a href="https://px.a8.net/svt/ejp?a8mat=3B9KQO+AP7H6A+1WP2+ZRALD" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www22.a8.net/svt/bgt?aid=200321088647&wid=001&eno=01&mid=s00000008903006006000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=3B9KQO+AP7H6A+1WP2+ZRALD" alt="">
+</div>
+</div>
+</aside><!-- ▲sidead01 -->
+
+<!-- ▼サイドナビ -->
+<nav id="sNav">
+<header class="side_header">
+<h2 class="ttl"><span class="txt">Data Menu</span></h2>
+</header>
+<div class="side_body">
+<ul id="sNav_list">
+<li> <a href="https://kabuoji3.com/stock/">
+<p class="item_wrap front"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_stock.png" width="31" alt="個別株価データ"> </i><span class="txt">個別株価データ</span> </p>
+<p class="item_wrap rear"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_stock.png" width="31" alt="個別株価データ"> </i><span class="txt">個別株価データ</span> </p>
+</a> </li>
+<li> <a href="https://kabuoji3.com/ranking/">
+<p class="item_wrap front"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_ranking.png" width="31" alt="株価ランキングデータ"> </i><span class="txt">株価ランキングデータ</span> </p>
+<p class="item_wrap rear"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_ranking.png" width="31" alt="株価ランキングデータ"> </i><span class="txt">株価ランキングデータ</span> </p>
+</a> </li>
+<li> <a href="https://kabuoji3.com/orderbook/">
+<p class="item_wrap front"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_orderbook.png" width="31" alt="寄前気配値ランキング"> </i><span class="txt">寄前気配値ランキング</span> </p>
+<p class="item_wrap rear"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_orderbook.png" width="31" alt="寄前気配値ランキング"> </i><span class="txt">寄前気配値ランキング</span> </p>
+</a> </li>
+<li> <a href="https://kabuoji3.com/stockholder/">
+<p class="item_wrap front"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_stockholder.png" width="31" alt="株主優待データ、優待内容"> </i><span class="txt">株主優待データ</span> </p>
+<p class="item_wrap rear"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_stockholder.png" width="31" alt="株主優待データ、優待内容"> </i><span class="txt">株主優待データ</span> </p>
+</a> </li>
+<li> <a href="https://kabuoji3.com/negative/">
+<p class="item_wrap front"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_negative.png" width="31" alt="逆日歩データ・逆日歩ランキング"> </i><span class="txt">逆日歩データ</span> </p>
+<p class="item_wrap rear"> <i class="icon"> <img src="https://kabuoji3.com/images/common/icon_negative.png" width="31" alt="逆日歩データ・逆日歩ランキング"> </i><span class="txt">逆日歩データ</span> </p>
+</a> </li>
+</ul>
+</div>
+</nav><!-- ▲サイドナビ -->
+
+<!-- ▼sidead02 -->
+<aside class="side_adv">
+<div class="adv_wrap">
+<div class="adv">
+<a href="https://px.a8.net/svt/ejp?a8mat=2ZHDZM+ADAT2Q+3250+67C4H" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=180530194627&wid=001&eno=01&mid=s00000014274001042000&mc=1"></a>
+</div>
+</div>
+<img border="0" width="0" height="0" src="https://www19.a8.net/0.gif?a8mat=2ZHDZM+ADAT2Q+3250+67C4H" alt="">
+</aside><!-- ▲sidead02 -->
+
+<!-- ▼ニュース -->
+<!-- ▲ニュース -->
+
+</div>
+</div>
+</div>
+
+<!-- ▼パンくずー -->
+﻿<div id="clearance">
+<div id="clearance_in">
+<nav id="tp_path">
+<ol>
+<li> <a href="https://kabuoji3.com/" class="txt home" itemprop="url"> <span itemprop="title">HOME</span> </a> </li>
+</ol>
+</nav>
+<p id="pageTop"> <a href="#wrapper" class="scroll"> <span class="front">PAGE TOP</span><span class="rear">PAGE TOP</span> </a> </p>
+</div>
+</div><!-- ▲パンくずー -->
+
+<!-- ▼フッター -->
+<footer id="footer">
+<div id="footer_top">
+<p id="fLogo"><img src="https://kabuoji3.com/images/common/flogo.png" width="161" height="27" alt="株式投資メモ・株価データベース"></p>
+<div id="fNav_wrap">
+<div id="fNav">
+<ul>
+<li><a href="https://kabuoji3.com/"><span class="txt">HOME</span></a></li>
+</ul>
+<ul>
+<li><a href="https://kabuoji3.com/stock/"><span class="txt">個別株価データ</span></a></li>
+<li><a href="https://kabuoji3.com/ranking/"><span class="txt">株価ランキングデータ</span></a></li>
+<li><a href="https://kabuoji3.com/orderbook/"><span class="txt">寄前気配値速報</span></a></li>
+</ul>
+<ul>
+<li><a href="https://kabuoji3.com/stockholder/"><span class="txt">株主優待データ</span></a></li>
+<li><a href="https://kabuoji3.com/negative/"><span class="txt">逆日歩データ</span></a></li>
+</ul>
+
+</div>
+
+<div id="fIcons">
+<ul>
+<li><a href="javascript:void(0);" onClick="window.open('https://twitter.com/share?url='+encodeURIComponent(location.href)+'&amp;text='+encodeURIComponent(document.getElementsByName('description').item(0).content),'twitter','toolbar=no,width=550,height=300');return false;"><img src="https://kabuoji3.com/images/common/icon_ftw.png" width="36" height="36" alt="Twitter"></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footer_btm"> <small id="copyright">株式投資メモ・株価データベース</small>
+</div>
+</footer><!-- ▲フッター -->
+
+</div>
+</div>
+<!-- ▼js -->
+<script src="https://kabuoji3.com/js/core.js"></script>
+<script src="https://kabuoji3.com/js/common.js"></script>
+<script src="https://kabuoji3.com/js/TweenMax.min.js"></script>
+<script src="https://kabuoji3.com/js/config.js"></script><!-- ▲js -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78484946-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>

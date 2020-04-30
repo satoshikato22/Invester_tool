@@ -145,7 +145,7 @@ public class ChartController {
         return "chart";
     }
     @GetMapping("/CD_chart")
-    public String CD_Chart(@RequestParam String id,Model model) {
+    public String CD_Chart(@RequestParam("id") String id,Model model) {
 
 
     	List<Map<String, Object>> getList = companyStockService.selectStock(id);
